@@ -38,9 +38,9 @@ for line in lines:
         extract_info = False
 
 # Create a figure and plot the extracted test losses
-plt.plot(test_losses, marker='o', linestyle='-', color='g', label='Test Loss')
+plt.plot(test_losses,linestyle='-', color='g', label='Test Loss')
 plt.title('Test Loss Over Time')
-plt.xlabel('Iteration')
+plt.xlabel('Epoch')
 plt.ylabel('Test Loss')
 plt.legend()
 plt.grid(True)

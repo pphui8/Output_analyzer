@@ -20,9 +20,9 @@ for line in lines:
         top1_errors.append(top1_error)
 
 # Create a figure and plot the extracted top-1 errors
-plt.plot(top1_errors, marker='o', linestyle='-', color='b', label='Top-1 Error')
+plt.plot(top1_errors, linestyle='-', color='b', label='Top-1 Error')
 plt.title('Top-1 Error Over Time')
-plt.xlabel('Iteration')
+plt.xlabel('Epoch')
 plt.ylabel('Top-1 Error')
 plt.legend()
 plt.grid(True)
