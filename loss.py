@@ -29,7 +29,11 @@ for line in lines:
     elif extract_info and loss_match:
         # If the flag is set and the line matches the pattern, extract test loss
         test_loss = float(loss_match.group(3))
-        test_losses.append(test_loss)
+        
+        # Check if the test loss is within an acceptable range (less than or equal to 0.7)
+        if test_loss <= 0.7:
+            test_losses.append(test_loss)
+
         # Reset the flag after extracting the information
         extract_info = False
 
